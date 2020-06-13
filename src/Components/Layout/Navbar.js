@@ -4,19 +4,21 @@ import {Link} from 'react-router-dom';
 
 const Navbar = ({title}) => {
         return (
-            <nav className="navbar navbar-expand-sm bg-info navbar-dark">
-                <i className='fab fa-github'></i>
-                <sup><i className="fas fa-satellite"></i></sup>
-                {title}
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/About">About</Link>
-                    </li>
-                </ul>
-            </nav>
+<nav className="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+    <a className="navbar-brand">
+        <i className='fab fa-github'></i>
+        <sup><i className="fas fa-satellite"></i></sup>
+        {title}
+    </a>
+  <ul className="navbar-nav">
+    <li className="nav-item">
+        <Link to="/" className="nav-link">Home</Link>
+    </li>
+    <li className="nav-item">
+        <Link to="/About" className="nav-link">About</Link>
+    </li>
+  </ul>
+</nav>
         )
 }
 
@@ -29,3 +31,4 @@ Navbar.propTypes = {
 
 
 export default Navbar
+

@@ -1,14 +1,60 @@
-/* .App {} */
+.App {
+  display: flex;
+  flex-direction:column;
+  min-height: 100vh;
+}
 
-.main{
+.wrapper{
+  margin-top:50px;
   flex-grow: 1;
-  background-color: whitesmoke;
-  /* create flex container */
+  background-color: beige;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  /* fitting items for responsiveness */
+  padding: 5px;
   flex-wrap: wrap;
-  /* how items align */
-  justify-content: space-evenly;
   }
+
+.userwrapper{
+  margin-top:20px;
+  flex-grow: 1;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  flex-wrap: wrap;
+  }
+
+.usercard{
+  border: none;
+  height:400;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.searchbar{
+  border-radius: 50px;
+  box-sizing: 50px;
+
+}
+
+.searchbutton{
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.clearbutton{
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-sizing: 25px;
+}
+
+.searchbutton, .clearbutton, .searchbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

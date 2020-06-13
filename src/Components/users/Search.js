@@ -20,26 +20,28 @@ const Search = () => {
     };
 
     const onChange = e => setText(e.target.value);
-    
         return (
             <div>
                 <form onSubmit={onSubmit} className="form">
                     <input
                         type='text'
                         name='text'
-                        placeholder='search for user'
+                        placeholder='Search for user'
                         value={text}
                         onChange={onChange}
+                        className="searchbar"
                     />
-                    <input
+                    <button
                         type="submit"
                         value="Search"
-                        className="btn btn-info btn-block"
-                    />
+                        className="searchbutton btn-danger"
+                    >
+                    <i class="fa fa-search"></i>
+                    </button>
+                    {GithubContext.users.length > 0 && (
+                        <button className="clearbutton btn-info" onClick={GithubContext.clearUsers}><i class="fa fa-search-minus"></i></button>
+                    )}
                 </form>
-                {GithubContext.users.length > 0 && (
-                <button className="btn btn-info btn-block" onClick={GithubContext.clearUsers}>Clear?</button>
-                )}
             </div>
         );
 }

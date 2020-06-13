@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
  
 const Usercontent = ({user: {login, avatar_url, html_url}}) => {
         return (
-            <div className="card text-center" style={cardStyle}>
+            <div className="usercard text-center" >
                 <img src={avatar_url} alt='' style={imgStyle}></img>
                 <div className="card-body">
                     <h4 className="card-title">{login}</h4>
@@ -14,11 +14,7 @@ const Usercontent = ({user: {login, avatar_url, html_url}}) => {
         )
 }
 
-const cardStyle= {
-    width: '400px',
-    backgroundColor: "yellow",
-    margin: "2%"
-}
+
 
 const imgStyle= {
     width:"70%",
@@ -27,8 +23,8 @@ const imgStyle= {
     marginRight: "auto",
     marginTop: "20px",
     borderRadius: "50%"
-
 }
+
 
 Usercontent.propTypes = {
     user: PropTypes.object.isRequired,

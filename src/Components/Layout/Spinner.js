@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react'
 
-const Spinner = () => <Fragment>
-            <div className="spinner-grow text-info"></div>
+const Spinner = () =>
+        <Fragment>
+            <div className="spinner-grow text-danger"></div>
         </Fragment>
 
 
