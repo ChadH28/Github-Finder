@@ -36,7 +36,7 @@ const User = ({match}) => {
         if (loading) return <Spinner/>;
         return (
             <Fragment>
-                <div className="userwrapper">
+                <div className="grid-2">
                     <Link to='/' className='backbutton btn-danger' style={bb}><i class="fa fa-home"></i></Link>
                     <div className="card" style={cardStyle}>
                         <img src={avatar_url} alt='' style={imgStyle}></img>
@@ -49,10 +49,10 @@ const User = ({match}) => {
                         <p><a href={html_url}><button style={button}>Visit github Profile</button></a></p>
                     </div>
 
-                        <div>
+                    <div>
                             {bio && (<Fragment>
                                         <h3>Bio</h3>
-                                        <p>{bio}</p>
+                                            <p>{bio}</p>
                                     </Fragment>
                             )}
                         <ul>
@@ -67,19 +67,22 @@ const User = ({match}) => {
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    <div className="card grid-2 text-center">
+                <div>
+                    <div className="badgelist">
                         <div className="badge badge-primary">Followers: {followers}</div>
                         <div className="badge badge-success">Following: {following}</div>
                         <div className="badge badge-danger">Public Repos: {public_repos}</div>
                         <div className="badge badge-warning">Public Gists: {public_gists}</div>
                     </div>
+                </div>
 
                     <div>
                         <h3>User Repos:</h3>
                         <Repos repos={repos}/>
                     </div>  
-                </div>
+                
             </Fragment>
         )
 }
