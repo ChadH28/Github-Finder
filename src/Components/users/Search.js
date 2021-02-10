@@ -21,8 +21,11 @@ const Search = () => {
 
     const onChange = e => setText(e.target.value);
         return (
-            <div>
+            <div className="container">
                 <form onSubmit={onSubmit} className="form">
+                    <h1>
+                        Github Finder
+                    </h1>
                     <input
                         type='text'
                         name='text'

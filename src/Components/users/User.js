@@ -36,17 +36,18 @@ const User = ({match}) => {
         if (loading) return <Spinner/>;
         return (
             <Fragment>
-                <div className="grid-2">
+                <div className="container">
+                <div className="grid-2 user-content">
                     <Link to='/' className='backbutton btn-danger' style={bb}><i class="fa fa-home"></i></Link>
-                    <div className="card" style={cardStyle}>
+                    <div className="card user-info">
                         <img src={avatar_url} alt='' style={imgStyle}></img>
                         <h1>{name}</h1>
-                        <p>Location: {location}</p>
+                        <p>Location - {location}</p>
                         <p>
-                            Hireable: {' '}
+                            Hireable - {' '}
                             {hireable ? <i className="fas fa-check text-success"/> : <i className="fas fa-times-circle text-danger"/>}
                         </p>
-                        <p><a href={html_url}><button style={button}>Visit github Profile</button></a></p>
+                        <p><a href={html_url}><button className="profile-btn">Visit github Profile</button></a></p>
                     </div>
 
                     <div>
@@ -57,13 +58,13 @@ const User = ({match}) => {
                             )}
                         <ul>
                             <li>
-                                {login && (<Fragment>Username: {login}</Fragment>)}
+                                {login && (<Fragment>Username - {login}</Fragment>)}
                             </li>
                             <li>
-                                {company && (<Fragment>Company: {company}</Fragment>)}
+                                {company && (<Fragment>Company - {company}</Fragment>)}
                             </li>
                             <li>
-                                {blog && (<Fragment>Website: {blog}</Fragment>)}
+                                {blog && (<Fragment>Website - {blog}</Fragment>)}
                             </li>
                         </ul>
                     </div>
@@ -78,22 +79,16 @@ const User = ({match}) => {
                     </div>
                 </div>
 
-                    <div>
-                        <h3>User Repos:</h3>
+                    <div className="user-repo">
+                        <h3>User Repos</h3>
                         <Repos repos={repos}/>
                     </div>  
-                
+                </div>
+
             </Fragment>
         )
 }
 
-const cardStyle= {
-    width: '400px',
-    backgroundColor: "white",
-    margin: "auto",
-    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-    textAlign: "center"
-}
 
 const imgStyle= {
     width:"70%",
@@ -103,17 +98,6 @@ const imgStyle= {
     marginTop: "20px",
     borderRadius: "50%"
 }
-const button= {
-    border: "none",
-    outline: "0",
-    display: "inline-block",
-    padding: "8px",
-    color: "white",
-    backgroundColor: "#000",
-    textAlign: "center",
-    width: "100%",
-    fontSize: "18px"
-  }
 
 const bb ={
     position: "fixed",
