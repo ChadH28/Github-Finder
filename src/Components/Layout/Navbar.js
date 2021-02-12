@@ -1,19 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import logo from "../images/GF-logo.png";
 
 const Navbar = ({ title }) => {
   return (
     <nav className="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand">
-          <i className="fab fa-github"></i>
-          <sup>
-            <i className="fas fa-satellite"></i>
-          </sup>
-          {title}
-        </a>
         <ul className="navbar-nav">
+          <li className="navbar-brand">
+            <img src={logo}/>
+          </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
               Home

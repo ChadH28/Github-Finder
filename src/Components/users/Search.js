@@ -24,7 +24,7 @@ const Search = () => {
             <div className="container">
                 <form onSubmit={onSubmit} className="form">
                     <h1>
-                        Github Finder
+                        GitFinder
                     </h1>
                     <input
                         type='text'
