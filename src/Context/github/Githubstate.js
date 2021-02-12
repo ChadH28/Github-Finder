@@ -22,7 +22,7 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 const GithubState = props => {
-    const initialState = {
+    const initialState = { 
         users: [],
         user: {},
         repos: [],
@@ -38,7 +38,7 @@ const GithubState = props => {
     
         dispatch({
             type: SEARCH_USERS,
-            payload: res.data.items
+            payload: res.data.items 
         })
     };
     
