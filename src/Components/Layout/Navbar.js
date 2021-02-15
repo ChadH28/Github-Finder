@@ -11,12 +11,12 @@ const Navbar = ({ title }) => {
           <li className="navbar-brand">
             <img src={logo}/>
           </li>
-          <li className="nav-item">
+          <li className="nav-item float-right">
             <Link to="/" className="nav-link">
               Home
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item float-right">
             <Link to="/About" className="nav-link">
               About
             </Link>

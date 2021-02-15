@@ -48,9 +48,11 @@ const User = ({match}) => {
                             {hireable ? <i className="fas fa-check text-success"/> : <i className="fas fa-times-circle text-danger"/>}
                         </p>
                         <p><a href={html_url}><button className="profile-btn">Visit github Profile</button></a></p>
+                    
+                    
                     </div>
 
-                    <div>
+                    <div >
                             {bio && (<Fragment>
                                         <h3>Bio</h3>
                                             <p>{bio}</p>

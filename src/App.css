@@ -113,17 +113,19 @@ body {
 }
 
 .searchbutton, .clearbutton, .searchbar {
-  margin-top: 20px;
   margin-bottom: 40px;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.form-header{
+  margin: auto;
+  text-align: center;
+}
+
 .form h1{
-margin: auto;
 position: relative;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-left: 25%;
 font-size: 100px;
 margin-top: 30px;
 color: white;
