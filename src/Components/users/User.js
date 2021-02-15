@@ -41,31 +41,31 @@ const User = ({match}) => {
                     <Link to='/' className='backbutton btn-danger' style={bb}><i class="fa fa-home"></i></Link>
                     <div className="card user-info">
                         <img src={avatar_url} alt='' style={imgStyle}></img>
-                        <h1>{name}</h1>
-                        <p>Location - {location}</p>
-                        <p>
+                        <h1 className="card-title">{name}</h1>
+                        <div className="card-body">
+                        <p className="card-text">Location - {location}</p>
+                        <p className="card-text">
                             Hireable - {' '}
                             {hireable ? <i className="fas fa-check text-success"/> : <i className="fas fa-times-circle text-danger"/>}
                         </p>
+                        </div>
                         <p><a href={html_url}><button className="profile-btn">Visit github Profile</button></a></p>
-                    
-                    
                     </div>
 
-                    <div >
+                    <div className="card bio-info">
                             {bio && (<Fragment>
                                         <h3>Bio</h3>
                                             <p>{bio}</p>
                                     </Fragment>
                             )}
                         <ul>
-                            <li>
+                            <li className="card-text">
                                 {login && (<Fragment>Username - {login}</Fragment>)}
                             </li>
-                            <li>
+                            <li className="card-text">
                                 {company && (<Fragment>Company - {company}</Fragment>)}
                             </li>
-                            <li>
+                            <li className="card-text">
                                 {blog && (<Fragment>Website - {blog}</Fragment>)}
                             </li>
                         </ul>

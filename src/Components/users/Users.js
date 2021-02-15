@@ -11,10 +11,12 @@ const Users = () => {
   } else {
     return (
       <div className="container">
-        <div style={userStyle}>
-          {users.map((user) => (
-            <Usercontent key={user.id} user={user}></Usercontent>
-          ))}
+        <div className="row row-cols-1 row-cols-md-3">
+       
+              {users.map((user) => (
+                <Usercontent key={user.id} user={user}></Usercontent>
+              ))}
+       
         </div>
       </div>
     );

@@ -87,12 +87,18 @@ body {
   width: 300px;
   margin: auto;
   text-align: center;
+  margin-bottom: 40px;
 }
+
+.usercard:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
 
 .searchbar{
   border-radius: 50px;
   box-sizing: 50px;
-  width: 80%;
+  width: 70%;
   height: 50px;
 
 }
@@ -151,9 +157,9 @@ color: white;
 }
 
 
-.user-content{
+/* .user-content{
   margin-top: 60px;
-}
+} */
 
 .user-repo{
   margin-bottom: 30px;
@@ -212,6 +218,16 @@ h2 :hover{
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.bio-info{
+  width: 400px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 25px;
+  padding-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 

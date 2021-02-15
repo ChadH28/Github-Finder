@@ -4,12 +4,15 @@ import {Link} from 'react-router-dom';
  
 const Usercontent = ({user: {login, avatar_url, html_url}}) => {
         return (
-            <div className="usercard text-center" >
+            
+            <div className="col" >
+                <div className="usercard text-center">
                 <img src={avatar_url} alt='' className='img-fluid' style={imgStyle}></img>
                 <div className="card-body">
                     <h4 className="card-title">{login}</h4>
                     <Link to={`/user/${login}`} className="btn btn-danger">See Profile</Link>
-                </div>               
+                </div> 
+                </div>
             </div>           
         )
 }
